@@ -1,7 +1,7 @@
-%% <Schule/Epochenheft.tex> Vorlageversion 1.1.1 <Robin Schneider>
-%%%Präambel
+%% <Schule/Epochenheft.tex> template 1.1.1 by Robin `ypid` Schneider <ypid23@aol.de>
+%%% preamble
 %\RequirePackage{snapshot}		%% \jobname.dep
-%\listfiles	%% listfiles in die Logdatei
+%\listfiles %% listfiles to logfile
 \RequirePackage{RequirePackageRS}
 \documentclass[12pt,a4paper,ngerman,numbers=noenddot,toc=listof]{scrartcl}	%% ,draft,pointednumbers,
 \usepackage[nohyperlinks,printonlyused]{acronym}
@@ -22,13 +22,13 @@
 	schoolRS,
 	chemistryRS,
 }
-%% Spetzifische angaben
+%% specific indications
 \readgitstat{7}
 \SetTITEL{Chemie}
 \SetAUTHOR{1}{}
 \SetKLASSE{12}
 \SetSUBJECT{Organische Chemie}
-\SetURL{http://robin.de.marissa.hostorama.ch/Klasse/12/Chemie-K12.pdf}
+\SetURL{http://ypid.files.wordpress.com/2013/04/chemie-k12.pdf}
 \choosedefaultlicense
 \SetCREATEDATE{2011}{11}{07}{17}{46}{23}		%% {YYYY}{MM}{DD}{HH}{MM}{SS}
 \SetABGABEDATUM{2}{2011}{11}{25}{1}
@@ -42,7 +42,7 @@
 %	files/chapters/introduction,
 %	files/chapters/Alkane,
 %}
-%%%Body
+%%% body
 \begin{document}
 \pdfbookmark[1]{\Titlepagename}{titlepage}\pagenumbering{Roman}\thispagestyle{empty}
 %\input{/home/rsadmin/Dokumente/LaTeX/input-document/titelpages/Epochenheft}
@@ -90,18 +90,19 @@
   Status:~\progressbar{.82} (eigenes Ermessen)
   \newpage
   \begin{sourcefiletable}{1}
-	\sourcefile{Hauptdatei}{\jobname.tex}
+	\Isourcefile{Hauptdatei}{\jobname.tex}
+	\Isourcefile{\LaTeX -Hacks}{files/header/hacks.tex}
 %	\sourcefile{Metainformationen}{files/metainfos.tex}
-	\sourcefile{Einführung}{files/chapters/introduction.tex}
-	\sourcefile{Alkane}{files/chapters/Alkane.tex}
-	\sourcefile{Alkane -- Tabelle
+	\Isourcefile{Einführung}{files/chapters/introduction.tex}
+	\Isourcefile{Alkane}{files/chapters/Alkane.tex}
+	\Isourcefile{Alkane -- Tabelle
 		(Strukturformel)}{files/chapters/Alkane/structural_formula.tex}
 	\Isourcefile{Alkane -- Tabelle
 		(Eigenschaften)}{files/chapters/Alkane/property.tex}
-	\sourcefile{Alkene}{files/chapters/Alkene.tex}
-	\sourcefile{Alkine}{files/chapters/Alkine.tex}
-	\sourcefile{Alkanole}{files/chapters/Alkanole.tex}
-	\sourcefile{Aldehyde}{files/chapters/Aldehyde.tex}
+	\Isourcefile{Alkene}{files/chapters/Alkene.tex}
+	\Isourcefile{Alkine}{files/chapters/Alkine.tex}
+	\Isourcefile{Alkanole}{files/chapters/Alkanole.tex}
+	\Isourcefile{Aldehyde}{files/chapters/Aldehyde.tex}
 %	\sourcefile{Titelseite}{files/titlepage.tex}
 %	\sourcefile{Literatur-Datenbank}{files/header/bibliographie.bib}
   \end{sourcefiletable}
