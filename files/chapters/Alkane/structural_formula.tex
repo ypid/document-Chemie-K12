@@ -1,0 +1,30 @@
+\begin{landscape}
+\section{Alkane (Paraffine)}
+\label{sec:Alkane}
+\renewcommand{\longtableheader}{\multicolumn{1}{c}{\textbf{Strukturformel}}
+&
+& \multicolumn{1}{c}{\textbf{vereinfachte Strukturformel}}
+& \multicolumn{1}{c}{\textbf{Summenformel}}
+& \multicolumn{1}{c}{\textbf{Name}}
+\\}
+\setatomsep{2em}
+\begin{longtable}{cccll}
+	\longtableheader
+	\endfirsthead
+	\longtableheader
+	\endhead
+	\caption{Ausgewählte Kohlenwasserstoffe}
+	\endlastfoot
+	\multicolumn{5}{r}{\longtableendfoot} \\
+	\endfoot
+
+	\chemfig{H-!{CH2}-H} & & \textdiscount & \tableprintACSandACL{CH4}\vspace{0.3cm} \\
+	\chemfig{H-!{CH2}-!{CH2}-H} & & \ce{CH3-CH3} & \tableprintACSandACL{C2H6}\vspace{0.3cm} \\
+	\chemfig{H-!{CH2}-!{CH2}-!{CH2}-H} & & \ce{CH3-CH2-CH3} & \tableprintACSandACL{C3H8}\vspace{0.3cm} \\
+	\chemfig{H-!{CH2}-!{CH2}-!{CH2}-!{CH2}-H} & & \ce{CH3-CH2-CH2-CH3} & \tableprintACSandACL{C4H10}\vspace{0.3cm} \\
+	\chemfig{H-!{CH2}-!{CH2}-!{CH2}-!{CH2}-!{CH2}-H} & & \ce{CH3-CH2-CH2-CH2-CH3}
+	&	\tableprintACSandACL{C5H12}\vspace{0.3cm} \\
+	\chemfig{H-!{CH2}-!{CH2}-!{CH2}-!{CH2}-!{CH2}-!{CH2}-H} & & \ce{CH3-CH2-CH2-CH2-CH2-CH3}
+	&	\tableprintACSandACL{C6H14}\vspace{0.3cm} \\
+\end{longtable}
+\end{landscape}

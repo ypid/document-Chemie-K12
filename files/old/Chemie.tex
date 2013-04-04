@@ -1,0 +1,49 @@
+%% <Schule/Epochenheft.tex> Vorlageversion 1.1.1 <Robin Schneider>
+%%%Präambel
+%\RequirePackage{snapshot}		%% \jobname.dep
+%\listfiles	%% listfiles in die Logdatei
+\RequirePackage{RequirePackageRS}
+\documentclass[12pt,a4paper,american,ngerman,numbers=noenddot,toc=listof]{scrartcl}
+%\usepackage[nohyperlinks,nolist]{acronym}		% nolist,withpage,footnote %% Abkürzungsverzeichnis
+\usepackage{
+%	physicsRS,
+	scrartclRS,
+	defaultRS,
+%	literatureRS,
+%	debugRS,
+	timeRS,
+	graphicRS,
+%	mathematicsRS,
+%	gamesRS,
+	layoutRS,
+	footingRS,
+	extensionsRS,
+	docExtensionsRS,
+	schoolRS,
+%	chemistryRS,
+}
+%% Spetzifische angaben
+\readgitstat{2}
+\SetTITEL{Chemie}
+\SetAUTHOR{1}{}
+\SetKLASSE{12}
+\SetSUBJECT{Organische Chemie}
+\SetURL{http://robin.de.marissa.hostorama.ch/Klasse/12/Chemie-K12.pdf}
+\choosedefaultlicense
+\SetCREATEDATE{2011}{11}{07}{17}{46}{23}		%% {YYYY}{MM}{DD}{HH}{MM}{SS}
+\SetABGABEDATUM{2}{2011}{11}{25}{1}
+\usepackage{
+	schoolPDFinfoRS,
+%	tableRS,
+}
+%\SetDraft{on}
+\begin{document}
+\selectlanguage{ngerman}
+Die URL von diesem Dokument hat sich geändert.
+Die aktuelle Adresse ist jetzt \url{\URL}.
+
+\selectlanguage{american}
+The URL of this document has changed.
+The current address is now \url{\URL}.
+
+\end{document}

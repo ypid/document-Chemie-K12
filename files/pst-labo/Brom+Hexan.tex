@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage{auto-pst-pdf}
+
+\pagestyle{empty}
+\usepackage{pst-labo}
+\begin{document}
+\newpsstyle{Pentan}{linestyle=none,fillstyle=solid,fillcolor=red!70!black}
+\newpsstyle{hellrot}{linestyle=none,fillstyle=solid,fillcolor=red!30}
+
+\begin{pspicture}(1,2.5)
+\psset{unit=0.58cm}
+\pstChauffageBallon[glassType=becher,
+	niveauLiquide1=36,
+%	niveauLiquide2=33,
+	aspectLiquide1=hellrot,
+%	aspectLiquide2=aspectLiquide1,
+	]
+\end{pspicture}
+\end{document}

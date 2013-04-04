@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage{auto-pst-pdf}
+
+\pagestyle{empty}
+\usepackage{pst-labo}
+\begin{document}
+\newpsstyle{Pentan}{linestyle=none,fillstyle=solid,fillcolor=blue!70!black}
+
+\begin{pspicture}(1,2.5)
+\psset{unit=0.58cm}
+\pstTubeEssais[niveauLiquide1=65,niveauLiquide2=43,
+	aspectLiquide1=Pentan,aspectLiquide2=aspectLiquide1,
+	tubePenche=-40
+]
+\end{pspicture}
+\end{document}

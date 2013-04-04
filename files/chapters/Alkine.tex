@@ -1,0 +1,91 @@
+\section{Alkine (Acetylene)}
+\label{sec:Alkine}
+Alkine sind ungesättigte, organische Verbindungen, azyklisch/aliphatisch,
+mit einer Dreifachbindung.
+Alle anderen Verbindungen sind Einfachbindungen.
+
+Das kleinst Mögliche Molekül ist Ethen.
+
+\begin{description}
+	\item[\ac{C2H2}:] \ce{H-C#C-H}
+	\item[\ac{C3H3}:] \chemfig{H-C~C-!{CH2}-H}
+\end{description}
+
+Auch die Alkine bilden eine homologe Reihe.
+\fxwarning{Hier fehlt vermutlich etwas}
+
+\section{Einige zyklische Kohlenwasserstoffe}
+Friedrich August Kekulé von Stradonitz, ein deutscher Chemiker, setzte sich mit dem Problem auseinander,
+dass einige Stoffe mit gleicher Summenformel andere Reaktionen hervorbringen.
+
+\renewcommand{\longtableheader}{\multicolumn{1}{c}{\textbf{\ce{C6H12}}} &
+& \multicolumn{1}{c}{\textbf{\ce{C6H10}}} &
+& \multicolumn{1}{c}{\textbf{\ce{C6H6}}}
+\\[0.8ex]}
+\begin{longtable}{p{0.27\hsize}cp{0.27\hsize}cp{0.27\hsize}}
+	\longtableheader
+	\endfirsthead
+	\longtableheader
+	\endhead
+	\caption{Einige zyklische Kohlenwasserstoffe}
+	\endlastfoot
+	\multicolumn{5}{r}{\longtableendfoot} \\
+	\endfoot
+
+	\chemfig{[:30]C(-[::210]H)(-[::150]H)*6(-!{CH2-Ring6}
+			-!{CH2-Ring6}-!{CH2-Ring6}-!{CH2-Ring6}-!{CH2-Ring6}-)}
+	& & \chemfig{[:30]C(-[::210]H)(-[::150]H)*6(-!{CH2-Ring6}
+			-C(-[::-30]H)=C(-[::-90]H)-!{CH2-Ring6}-!{CH2-Ring6}-)}
+	& & \chemfig{[:30]C(-[::180]H)*6(-C(-H)
+			=C(-H)-C(-H)=C(-H)-C(-H)=)} \\[8.5ex]
+	Cyclohexan		& & Cyclohexen		& & 1,3,5-Cyclohexantrien \\
+	Es addiert \ac{Br2} nicht (nicht erwartet)	& & \ac{Br2} wird addiert (erwartet)
+	& & Es addiert \ac{Br2} nicht (nicht erwartet) \\
+	& & \multicolumn{3}{c}{\emph{Mesomere Grenzstruktur}} \\
+	& & \multicolumn{3}{c}{(theoretisch möglich und völlig richtig,} \\
+	& & \multicolumn{3}{c}{aber in der Realität nicht vorhanden.)} \\
+\end{longtable}
+%Benzdring (irreführender Name)
+
+\begin{description}
+	\item[\ac{C6H6}:] \chemfig{[:30]C(-[::180]H)**6(-C(-H)-C(-H)-C(-H)-C(-H)-C(-H)-)}
+		\hspace{3em}beziehungsweise\hspace{3em} \chemfig{**6(------)} \\[0.8ex]
+		Das nicht addieren von Benzol mit \ac{Br2} wird so erklärt,
+		dass je ein Außenelektron der sechs \ac{6}-Atome sich in einem Kreis bewegt
+		und diese Außenelektronen somit allen sechs \ac{6}-Atomen gehören.
+		Diesen Ring nennt man $\pi$-Elektronensextett. \\
+		Wegen des angenehmen Duftes heißen sie Aromaten.
+\end{description}
+
+\subsection{Reaktion von Cyclohexan}
+\begin{minipage}{10.7em}
+\chemfig{[:30]C(-[::210]H)(-[::150]H)*6(-!{CH2-Ring6}
+	-!{CH2-Ring6}-!{CH2-Ring6}-!{CH2-Ring6}-!{CH2-Ring6}-)}
+\end{minipage}
+\begin{minipage}{11.8em}
+\ce{+\,} \ce{\lewis{246,Br}-\lewis{026,Br}}
+\ce{->} \ce{H-\lewis{026,Br}} \ce{\,+}
+\end{minipage}
+\begin{minipage}{10em}
+\chemfig{[:30]C(-[::210]H)(-[::150]H)*6(-!{CH2-Ring6}
+	-!{CH2-Ring6}-C(-[::-30]H)(-[::-90]\lewis{026,Br})-!{CH2-Ring6}-!{CH2-Ring6}-)}
+\end{minipage}
+
+Es entsteht \ac{HBr} und 1-Monobromcyclohexan.
+
+\subsection{Reaktion von Cyclohexen}
+\begin{minipage}{10.7em}
+\chemfig{[:30]C(-[::210]H)(-[::150]H)*6(-!{CH2-Ring6}
+	-C(-[::-30]H)=C(-[::-90]H)-!{CH2-Ring6}-!{CH2-Ring6}-)}
+\end{minipage}
+\begin{minipage}{7em}
+\ce{+\,} \ce{\lewis{246,Cl}-\lewis{026,Cl}}
+\ce{->}
+\end{minipage}
+\begin{minipage}{10em}
+\chemfig{[:30]C(-[::210]H)(-[::150]H)*6(-!{CH2-Ring6}
+	-C(-[::-30]H)(-[::-90]\lewis{046,Cl})-C(-[::-30]\lewis{024,Cl})(-[::-90]H)
+	-!{CH2-Ring6}-!{CH2-Ring6}-)}
+\end{minipage}
+
+Es entsteht 1,2-Dichlorcyclohexan.

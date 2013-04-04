@@ -1,0 +1,45 @@
+\renewcommand{\longtableheader}{\multicolumn{1}{l}{\textbf{Formel}}
+& \multicolumn{1}{l}{\textbf{Name}}
+& \multicolumn{1}{l}{\textbf{Schmelz-}}
+& \multicolumn{1}{l}{\textbf{Siede-}}
+%& \multicolumn{1}{l}{\textbf{Flamm-}}
+& \multicolumn{1}{l}{\textbf{Aggregat-}}
+%& \multicolumn{1}{l}{\textbf{Dichte}}
+& \multicolumn{1}{l}{\textbf{Viskosität}} \\
+&
+& \multicolumn{1}{l}{\textbf{temp. (\si{\degreeCelsius})}}
+& \multicolumn{1}{l}{\textbf{temp. (\si{\degreeCelsius})}}
+%& \multicolumn{1}{l}{\textbf{temp. (\si{\degreeCelsius})}}
+& \multicolumn{1}{l}{\textbf{zustand}}
+%& \multicolumn{1}{l}{\textbf{(\si{\gram\per\square\centi\metre})}}
+& \\
+}
+\begin{longtable}{llrrlc}
+	\longtableheader
+	\endfirsthead
+	\longtableheader
+	\endhead
+	\caption{Eigenschaften Ausgewählte Kohlenwasserstoffe}
+	\endlastfoot
+	\multicolumn{6}{r}{\longtableendfoot} \\
+	\endfoot
+
+	\tableprintACSandACL{CH4}		& $-184$	& $-164$	& Gas		& \\
+	\tableprintACSandACL{C2H6}		& $-172$	& $-89$		& Gas		& \\
+	\tableprintACSandACL{C3H8}		& $-190$	& $-42$		& Gas		& \\
+	\tableprintACSandACL{C4H10}		& $-135$	& $-0,5$	& Gas		& \\
+	\tableprintACSandACL{C5H12}		& $-129$	& 36	& flüssig	& \\
+	\tableprintACSandACL{C6H14}		& $-94$		& 69	& flüssig	& \\
+	\tableprintACSandACL{C7H16}		& $-90$		& 98	& flüssig	& \\
+	\tableprintACSandACL{C8H18}		& $-59$		& 126	& flüssig	& \\
+	\tableprintACSandACL{C9H20}		& $-54$		& 151	& flüssig	& \\
+	\tableprintACSandACL{C10H22}	& $-30$		& 174	& flüssig	& \\
+	\tableprintACSandACL{C11H24}	& $-26$		& 196	& flüssig	& \\
+	\tableprintACSandACL{C12H26}	& $-10$		& 216	& flüssig	& \\
+	\tableprintACSandACL{C13H28}	& $-6$		& 230	& flüssig	& \\
+	\tableprintACSandACL{C14H30}	& 5,5	& 251	& flüssig	& \\
+	\tableprintACSandACL{C15H32}	& 10	& 268	& flüssig	& \\
+	\tableprintACSandACL{C16H34}	& 18	& 280	& fest		& \\
+	\tableprintACSandACL{C17H36}	& 22	& 303	& fest
+		&  \multirow{-18}{*}{\rotatebox{-90}{$\autorightarrow{nimmt zu}{}$}} \\
+\end{longtable}

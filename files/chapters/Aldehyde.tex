@@ -1,0 +1,90 @@
+\section{Aldehyde}
+\begin{description}
+	\item[Untergruppe:] Alkanale \\
+		Alkanale sind kettenförmige organische Verbindungen mit einer
+		Aldehydgruppe im Molekül. Sie sind Derivate der Alkane.
+	\item[Einige Vertreter:]
+	\begin{description}
+		\item[\ac{CH2O}:] \chemfig{H-C(=[::45]\lewis{02,O})(-[::-45]H)} \hfil beziehungsweise \ce{HCHO}
+		\item[\ac{C2H4O}:] \chemfig{H-!{CH2}-C(=[::45]\lewis{02,O})(-[::-45]H)}
+			\hfil beziehungsweise \ce{CH3-CHO}
+		\item[\ac{C3H6O}:] \chemfig{H-!{CH2}-!{CH2}-C(=[::45]\lewis{02,O})(-[::-45]H)}
+			\hfil beziehungsweise \ce{CH3-CH2-CHO}
+	\end{description}
+\end{description}
+
+\subsection{Nachweise der Aldehydgruppen}
+\cVersuch{3}{Nachweis für Aldehyde}
+\begin{description}
+	\item[Aufbau:] Ein Becherglas, gefüllt mit konzentriertem \ac{C2H5OH}
+		und fuchsinschwefliger Säure (Schiffsches Reagenz).
+		Einem Bunsenbrenner und ein \ac{29}-Streifen.
+	\item[Durchführung:]~
+	\begin{enumerate}
+		\item \ac{29}-Streifen in der Flamme oxidieren lassen.
+		\item In die Flüssigkeit halten.
+	\end{enumerate}
+	\item[Beobachtung:] Die Flüssigkeit färbt, wenn das \ac{CuO} hinzukommt.
+		Es geht von farblos zu Rot-Lila.
+		Das \ac{CuO} wird wieder zu \ac{29} (es wird wieder glänzend).
+	\item[Gleichung:] \chemfig{H-!{CH2}-C(-[::90]H)(-[::-90]\textcolor{red}{H})
+			-\lewis{26,O}-\textcolor{red}{H}} \chemsign{+}
+		Cu\textcolor{blue}{O} \chemsign{\ce{->}} \ce{Cu} \chemsign{+}
+		\textcolor{red}{\ce{H2}}\textcolor{blue}{O} \chemsign{+}
+		\chemfig{H-!{CH2}-C(=[::45]\Lewis{02,O})(-[::-45]H)} \\[0.5em]
+		Es entsteht \ac{29}, \ac{H2O} und \ac{C2H4O}. %% Alkanal
+\end{description}
+
+\subsubsection{Gleich zu Experiment \arabic{cVersuch} nur mit 2-Propanol}
+\chemfig{H-!{CH2}-C(-[::90,2]\lewis{24,O}(-H))(-[::-90]H)-!{CH2}-H}
+\chemsign{+} \ce{CuO} \chemsign{\ce{->}}
+\ce{Cu} \chemsign{+} \ce{H2O} \chemsign{+}
+\chemfig{H-!{CH2}-C(=[::90]\lewis{13,O})-!{CH2}-H}
+
+\cVersuch{3}{Fehling-Probe}
+\begin{description}
+	\item[Aufbau:] Fehling 1 (\ac{CuSO4}, ist hellblau)
+		und Fehling 2 (\ac{C4H4KNaO6}, ist farblos) in ein Becherglas geben.
+		Die zwei Flüssigkeiten werden zusammen Dunkelblau (Königsblau).
+	\item[Durchführung:] Die zu Testende Substanz dazugeben, hier \ac{C6H12O6}.
+	\item[Beobachtung:] Die Flüssigkeit färbt sich über Braun zu Orange.
+\end{description}
+
+\cVersuch{3}{Tollensprobe (Silberspiegel-Probe)}
+\begin{description}
+	\item[Aufbau:] \ac{AgNO3}, \ac{NH4OH}, \ac{NaOH}, \ac{C6H12O6}, Dreifuß, Bunsenbrenner,
+		Becherglas, Reagenzglas.
+	\item[Durchführung:] \ac{C6H12O6} in ein Reagenzglas geben,
+		dazu \ac{AgNO3}, \ac{NH4OH} und \ac{NaOH}. Nun langsam erhitzen.
+		Die Flüssigkeit darf nicht sieden.
+		Außerdem sollte die Flüssigkeit nicht unnötig geschüttelt werden.
+	\item[Beobachtung:] Die Flüssigkeit wird erst braun,
+		dann setzt sich innen am Reagenzglas \ac{47} ab.
+\end{description}
+
+\fxwarning{Hier fehlt Exp. \acl{C2H4O} und \ac{CuO} reagiert zu \acl{29} und \acl*{C2H4O2}}
+
+\renewcommand{\longtableheader}{\multicolumn{1}{l}{\textbf{Name}}
+& \multicolumn{1}{l}{\textbf{Endungen}}
+\\
+}
+\begin{longtable}{ll}
+	\longtableheader
+	\endfirsthead
+	\longtableheader
+	\endhead
+	\caption{Übersicht über die behandelten funktionellen Gruppen}
+	\endlastfoot
+	\multicolumn{2}{r}{\longtableendfoot} \\
+	\endfoot
+
+	\hyperref[sec:Alkane:Definition]{Alkane}		& -an \\
+	\hyperref[sec:Alkene]{Alkene}					& -en \\
+	\hyperref[sec:Alkine]{Alkine}					& -in \\
+	\hyperref[sec:Alkanole]{Alkanole}				& -ol \\
+	\hyperref[sec:Alkanole]{Alkohole}				& -ol\fxwarning{true ???} \\
+	\href{\WikiURL/Ketone}{Ketone}					& -on \\
+	\href{\WikiURL/Ether}{Ether}					& -ether \\
+	\href{\WikiURL/Alkoholate}{Alkoholate}			& \\
+	\href{\WikiURL/Alkanole}{Alkanole}				& \\
+\end{longtable}

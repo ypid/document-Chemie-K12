@@ -1,0 +1,58 @@
+\nonumber		%% für align
+
+\newcommand{\WikiURL}{http://de.wikipedia.org/wiki}
+\newcommand{\tableprintACSandACL}[1]{\acs*{#1} & \acl*{#1}}
+\renewcommand{\printSectionListOfAbbreviationsChemistry}{
+\section*{Abkürzungsverzeichnis\protect\footnote{Verzeichnis aller im Text, ausgenommen Tabellen,
+benutzten chemischen
+Elemente, sortiert nach ihrer Ordnungszahl und Moleküle. Die Elemente und Moleküle wurden beim
+ersten Auftreten ausgeschrieben und die Abkürzungen in Klammern dahinter gesetzt. Alle folgenden
+Male wurde nur die Abkürzung benutzt. In Überschriften wurde davon unabhängig die Langform
+benutzt.}}
+%% Section ist größer als Inhaltsverzeichnis
+\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+}
+
+\newcommand{\donkeybridge}[1]{%
+{\centering%
+
+Eselsbrücke #1
+
+}}
+
+\usepackage{chemarrow}
+
+\newcommand{\InMathisHeft}[1]{\ifDraft{%
+\texttt{Begin Mathis Heft \\ Das folgende ist aus dem Heft von Mathis (frühere Klasse)... \\ #1}
+
+\texttt{End Mathis Heft}
+}{}}
+
+\ifDraft{
+%	\cfoot{Version: \printversion}
+	\usepackage[draft,nomargin,inline]{fixme}
+	\fxusetheme{colorsig}\renewcommand{\germanlistfixmename}{Verzeichnis der Anmerkungen}
+	}{
+	\usepackage{fixme}
+}
+
+\newcounter{cVersuch}
+%\newcommand{\Expname}{\textcolor{bleu}{Experiment \arabic{cVersuch}:}}
+\newcommand{\Expname}{Experiment \arabic{cVersuch}:}
+\newcommand{\cVersuch}[2]{
+  \stepcounter{cVersuch}
+  \sixIF{#1}{\section{\Expname ~#2}}
+    {\subsection{\Expname ~#2}}
+    {\subsubsection{\Expname ~#2}}
+    {\pdfbookmark[1]{Experiment \arabic{cVersuch}: #2}{Experiment_\arabic{cVersuch}}
+    \section*{\Expname ~#2}}
+    {\pdfbookmark[2]{Experiment \arabic{cVersuch}: #2}{Experiment_\arabic{cVersuch}}
+    \subsection*{\Expname ~#2}}
+    {\pdfbookmark[3]{Experiment \arabic{cVersuch}: #2}{Experiment_\arabic{cVersuch}}
+    \subsubsection*{\Expname ~#2}}
+    {n.d.}
+}
+
+%% chemfig
+\definesubmol{CH2-Ring6}{C(-[::-30]H)(-[::-90]H)}
+\definesubmol{COH}{C(-[::90]H)(-[::-90]OH)}

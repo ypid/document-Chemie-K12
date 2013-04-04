@@ -1,0 +1,128 @@
+%% <Schule/Epochenheft.tex> Vorlageversion 1.1.1 <Robin Schneider>
+%%%Präambel
+%\RequirePackage{snapshot}		%% \jobname.dep
+%\listfiles	%% listfiles in die Logdatei
+\RequirePackage{RequirePackageRS}
+\documentclass[12pt,a4paper,ngerman,numbers=noenddot,toc=listof]{scrartcl}	%% ,draft,pointednumbers,
+\usepackage[nohyperlinks,printonlyused]{acronym}
+\usepackage{
+	physicsRS,
+	scrartclRS,
+	defaultRS,
+%	literatureRS,
+%	debugRS,
+	timeRS,
+	graphicRS,
+%	mathematicsRS,
+%	gamesRS,
+	layoutRS,
+%	footingRS,
+	extensionsRS,
+	docExtensionsRS,
+	schoolRS,
+	chemistryRS,
+}
+%% Spetzifische angaben
+\readgitstat{7}
+\SetTITEL{Chemie}
+\SetAUTHOR{1}{}
+\SetKLASSE{12}
+\SetSUBJECT{Organische Chemie}
+\SetURL{http://robin.de.marissa.hostorama.ch/Klasse/12/Chemie-K12.pdf}
+\choosedefaultlicense
+\SetCREATEDATE{2011}{11}{07}{17}{46}{23}		%% {YYYY}{MM}{DD}{HH}{MM}{SS}
+\SetABGABEDATUM{2}{2011}{11}{25}{1}
+\usepackage{
+	schoolPDFinfoRS,
+	tableRS,
+}
+%\SetDraft{on}
+\input{files/header/hacks}
+%\includeonly{
+%	files/chapters/introduction,
+%	files/chapters/Alkane,
+%}
+%%%Body
+\begin{document}
+\pdfbookmark[1]{\Titlepagename}{titlepage}\pagenumbering{Roman}\thispagestyle{empty}
+%\input{/home/rsadmin/Dokumente/LaTeX/input-document/titelpages/Epochenheft}
+\input{/home/rsadmin/Dokumente/LaTeX/input-document/titelpages/chemistry}
+\newpage\pdfbookmark[1]{\contentsname}{inhaltsverzeichnis}
+\tableofcontents	%% Inhaltsverzeichnis
+\newpage
+\listoffigures		%% Abbildungsverzeichnis
+\listoftables		%% Tabellenverzeichnis
+%\lstlistoflistings	%% Quellcodeverzeichnis
+\newpage
+\printSectionListOfAbbreviationsChemistry
+\includeListOfAbbreviationsChemistry[multicols]
+
+\setcounter{headpages}{\value{page}}\newpage\pagenumbering{arabic}
+%%%%%%%%%%%
+\include{files/chapters/introduction}
+
+\include{files/chapters/Alkane}
+
+\include{files/chapters/Alkene}
+
+\include{files/chapters/Alkine}
+
+\include{files/chapters/Alkanole}
+
+\include{files/chapters/Aldehyde}
+
+%\include{files/garbage}
+
+
+\setcounter{sectionsV}{\value{section}}		%% Speichert die sectionnummer vor \appendix zwischen
+\appendix	%% Sorgt für Buchstaben im Inhaltsverzeichnis
+
+%\newpage\printbibliography[heading=bibnumbered]
+
+\vfill
+\printURLlong
+\printlicense
+\printendsignature
+
+\include{files/appendix}
+%\ifDraft{
+  \newpage\Statistiken
+  Status:~\progressbar{.82} (eigenes Ermessen)
+  \newpage
+  \begin{sourcefiletable}{1}
+	\sourcefile{Hauptdatei}{\jobname.tex}
+%	\sourcefile{Metainformationen}{files/metainfos.tex}
+	\sourcefile{Einführung}{files/chapters/introduction.tex}
+	\sourcefile{Alkane}{files/chapters/Alkane.tex}
+	\sourcefile{Alkane -- Tabelle
+		(Strukturformel)}{files/chapters/Alkane/structural_formula.tex}
+	\Isourcefile{Alkane -- Tabelle
+		(Eigenschaften)}{files/chapters/Alkane/property.tex}
+	\sourcefile{Alkene}{files/chapters/Alkene.tex}
+	\sourcefile{Alkine}{files/chapters/Alkine.tex}
+	\sourcefile{Alkanole}{files/chapters/Alkanole.tex}
+	\sourcefile{Aldehyde}{files/chapters/Aldehyde.tex}
+%	\sourcefile{Titelseite}{files/titlepage.tex}
+%	\sourcefile{Literatur-Datenbank}{files/header/bibliographie.bib}
+  \end{sourcefiletable}
+%}{}
+%\ifDraft{
+  \begin{landscape}
+	\pagestyle{empty}
+	\pdfbookmark[2]{Versionshinweise}{versionshinweise}
+	\subsection*{Versionshinweise}
+	\input{files/git/versions-log}
+	\printgitstatlandscape{1}
+  \end{landscape}
+	\printgitstat{1}
+	\subsubsection*{Dateien?}
+	\pdfbookmark[3]{Dateien?}{files_by_date}
+	\includegraphics[width=14cm]{files/git/stats/files_by_date-crop}
+	\listoffixmes
+	\ifDraft{
+	Alle Sätze bei deren Wahrheitsgehalt ich mir unsicher bin, sind mit \enquote{true ???}
+	Markiert und werden, falls sie nicht bestätigt werden, werden diese nicht im finalen Dokument
+	enthalten sein.
+	}{}
+%}{}
+\end{document}
