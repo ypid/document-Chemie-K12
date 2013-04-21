@@ -1,4 +1,5 @@
-%% <Schule/Epochenheft.tex> template 1.1.1 by Robin `ypid` Schneider <ypid23@aol.de>
+%% <school/Epochenheft.tex> template 1.1.1 by Robin `ypid` Schneider <ypid23@aol.de>
+%% The current version can be found on: https://github.com/ypid/typesetting/blob/master/templates/school/Epochenheft.tex
 %%% preamble
 %\RequirePackage{snapshot}		%% \jobname.dep
 %\listfiles %% listfiles to logfile
@@ -29,6 +30,7 @@
 \SetKLASSE{12}
 \SetSUBJECT{Organische Chemie}
 \SetURL{http://ypid.files.wordpress.com/2013/04/chemie-k12.pdf}
+\SetGitURL{https://github.com/ypid/document-Chemie-K12}
 \choosedefaultlicense
 \SetCREATEDATE{2011}{11}{07}{17}{46}{23}		%% {YYYY}{MM}{DD}{HH}{MM}{SS}
 \SetABGABEDATUM{2}{2011}{11}{25}{1}
@@ -81,7 +83,6 @@
 
 \vfill
 \printURLlong
-\printlicense
 \printendsignature
 
 \include{files/appendix}
@@ -113,13 +114,9 @@
 	\pdfbookmark[2]{Versionshinweise}{versionshinweise}
 	\subsection*{Versionshinweise}
 	\input{files/git/versions-log}
-	\printgitstatlandscape{1}
+	% \printgitstatlandscape{1}
   \end{landscape}
-	\printgitstat{1}
-	\subsubsection*{Dateien?}
-	\pdfbookmark[3]{Dateien?}{files_by_date}
-	\includegraphics[width=14cm]{files/git/stats/files_by_date-crop}
-	\listoffixmes
+	% \printgitstat{1}
 	\ifDraft{
 	Alle Sätze bei deren Wahrheitsgehalt ich mir unsicher bin, sind mit \enquote{true ???}
 	Markiert und werden, falls sie nicht bestätigt werden, werden diese nicht im finalen Dokument
